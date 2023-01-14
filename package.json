@@ -11,8 +11,12 @@
     "build:prod": "webpack --config ./webpack.prod.js"
   },
   "dependencies": {
+    "ariakit": "^2.0.0-next.43",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-icons": "^4.7.1",
+    "react-is": "^18.0.0",
+    "react-router-dom": "^6.6.2",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
@@ -45,6 +49,9 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "resolutions": {
+    "@types/react": "^18.0.21"
   },
   "husky": {
     "hooks": {
