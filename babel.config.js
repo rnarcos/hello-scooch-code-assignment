@@ -4,5 +4,5 @@ module.exports = {
     '@babel/preset-typescript',
     '@babel/preset-react',
   ],
-  plugins: ['@babel/plugin-syntax-jsx'],
+  plugins: ['@babel/plugin-syntax-jsx', '@babel/transform-runtime'],
 };
