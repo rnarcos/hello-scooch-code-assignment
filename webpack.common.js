@@ -7,11 +7,18 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode: 'none',
   resolve: {
-    extensions: ['.ts', '.tsx'],
+    extensions: ['.js', '.ts', '.tsx'],
   },
   entry: {
     app: [path.resolve(__dirname, 'src', 'index.tsx')],
-    vendors: ['react', 'react-dom', 'styled-components'],
+    vendors: [
+      'react',
+      'react-dom',
+      'styled-components',
+      'react-is',
+      'react-router-dom',
+      'react-icons',
+    ],
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -22,6 +29,11 @@ module.exports = {
       {
         test: /\.ts(x)?$/,
         use: 'babel-loader',
+      },
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto',
       },
     ],
   },
