@@ -8,17 +8,16 @@ module.exports = {
   mode: 'none',
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
+    alias: {
+      'styled-components': path.resolve(
+        __dirname,
+        'node_modules',
+        'styled-components',
+      ),
+    },
   },
   entry: {
-    app: [path.resolve(__dirname, 'src', 'index.tsx')],
-    vendors: [
-      'react',
-      'react-dom',
-      'styled-components',
-      'react-is',
-      'react-router-dom',
-      'react-icons',
-    ],
+    app: path.resolve(__dirname, 'src', 'index.tsx'),
   },
   output: {
     filename: '[name].[contenthash].js',
